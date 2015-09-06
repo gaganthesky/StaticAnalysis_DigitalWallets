@@ -1,0 +1,860 @@
+<?xml version="1.0" ?><manifest android:versionCode="819025400" android:versionName="8.0-R190-v25" package="com.google.android.apps.walletnfcrel" platformBuildVersionCode="21" platformBuildVersionName="5.0-1525922" xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21">
+	</uses-sdk>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.CAMERA">
+	</uses-permission>
+	<uses-permission android:name="android.permission.FLASHLIGHT">
+	</uses-permission>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission android:name="android.permission.NFC">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_CONTACTS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_PROFILE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED">
+	</uses-permission>
+	<uses-permission android:name="android.permission.USE_CREDENTIALS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.apps.walletnfcrel.permission.C2D_MESSAGE">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.apps.wallet.permission.WALLET_INTERNAL">
+	</uses-permission>
+	<application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@7F030001" android:label="@7F08044C" android:name="com.google.android.apps.wallet.application.WalletApplication" android:requiredAccountType="com.google">
+		<meta-data android:name="com.google.android.apps.wallet.config.featurecontrol.FeatureSet" android:value="PRODUCTION">
+		</meta-data>
+		<service android:exported="true" android:name="com.google.android.apps.wallet.globalresources.GlobalResourcesSyncService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+			<intent-filter>
+				<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:exported="true" android:name="com.google.android.apps.wallet.log.EventLogUploadService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+			<intent-filter>
+				<action android:name="com.google.android.gms.gcm.ACTION_TASK_READY">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.reset.ResetService">
+		</service>
+		<activity android:name="com.google.android.apps.wallet.entrypoint.WalletRootActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="home" android:scheme="googlewallet">
+				</data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:pathPrefix="/home" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:pathPrefix="/m/cgw/home" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:pathPrefix="/manage/cgw/home" android:scheme="https">
+				</data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="google.com" android:path="/wallet/m/android-nfc-start" android:scheme="http">
+				</data>
+				<data android:host="www.google.com" android:path="/wallet/m/android-nfc-start" android:scheme="http">
+				</data>
+				<data android:host="google.com" android:path="/wallet/m/android-nfc-start" android:scheme="https">
+				</data>
+				<data android:host="www.google.com" android:path="/wallet/m/android-nfc-start" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.pin.PinResetReturnActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="com.google.android.apps.wallet.pin.GaiaPinResetReturnActivity" android:scheme="googlewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.funding.LegacySetupNfcBackingInstrumentsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.hce.setup.LegacySetupNfcPaymentActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/tapandpay/setup" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.hce.setup.LegacySetupNfcPaymentCongratsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.hce.setup.TapAndPaySetupActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.pin.VerifyCloudPinActivity" android:screenOrientation="1" android:theme="@7F0A018C" android:windowEnterAnimation="@7F050006" android:windowExitAnimation="@7F050007" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.pin.ChangeOrSetPinActivity" android:screenOrientation="1" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:exported="true" android:name="com.google.android.apps.wallet.help.LicenseDisclosureActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.mywallet.MyWalletActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:pathPrefix="/mywallet" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.storedvalue.WalletBalanceActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/walletbalance" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.orders.OrdersActivity" android:theme="@7F0A0190">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/labels/-5755883416758377342/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:path="/orders" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/labels/-5755883416758377342/view" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:path="/manage/cgw/labels/-5755883416758377342/view" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.orders.OrdersListActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.orders.NewOrdersListActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.offers.MyOffersListActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/labels/7670735746256456552/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/labels/7670735746256456552/view" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:path="/manage/cgw/labels/7670735746256456552/view" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.offers.OffersListActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.LoyaltyMyProgramsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/labels/-3704206610053651337/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/labels/-3704206610053651337/view" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:path="/manage/cgw/labels/-3704206610053651337/view" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.LoyaltyListActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.giftcard.MyGiftCardsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/labels/6676298664798835438/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/labels/6676298664798835438/view" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:path="/manage/cgw/labels/6676298664798835438/view" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.giftcard.GiftCardListActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.help.ui.HowToPurchaseSynopsisActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/help/purchasing" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.tapandpay.ui.TapTroubleshooterActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.funding.SelectFundingSourceActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/settings/tapandpay" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.transfer.ContactSearchActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/p2p/request" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:path="/fundstransfer/p2p/send" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.transfer.ConfirmMoneyTransferActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.SendMoneyActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/.*/send" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/byId/.*/send" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/.*/settle" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/byId/.*/settle" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.transfer.request.RequestMoneyActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.IncomingMoneyRequestListActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/p2p/request/incoming/list" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.ClaimMoneyIntroActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/p2p/acceptAll" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.ClaimMoneyVerifyYourIdentityActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.ReviewClaimMoneyActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.p2p.ClaimMoneyResultsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.formsofpayment.ui.FormsOfPaymentActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPrefix="/formsofpayment" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.topup.TopUpActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000005">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/storedvalue/add" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.topup.FeeInfoActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.recurringtopup.SetupRecurringTopupActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/storedvalue/recurringtopup/create" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.recurringtopup.RecurringTopupIntroActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.recurringtopup.ViewRecurringTopupActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/storedvalue/recurringtopup/view" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/storedvalue/recurringtopup/cancel" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.recurringtopup.RecurringTopupErrorActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/fundstransfer/storedvalue/recurringtopup/error" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.recurringtopup.ReviewRecurringTopupActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.withdraw.WithdrawActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.kyc.KycActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.kyc.KycCaptureIdActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.kyc.KycSsnActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.kyc.KycVerifyingIdentityActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:configChanges="0x00000020" android:excludeFromRecents="true" android:launchMode="1" android:name="com.google.android.apps.wallet.tapandpay.ui.TapActivity" android:noHistory="true" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:configChanges="0x00000020" android:excludeFromRecents="true" android:launchMode="1" android:name="com.google.android.apps.wallet.tapandpay.ui.TapCompletedActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.google.android.apps.wallet.tapandpay.ui.PaymentTryAgainActivity" android:noHistory="true" android:screenOrientation="1" android:taskAffinity="com.google.android.apps.wallet.PaymentTryAgainAffinity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.paymentcard.ui.AddNewPaymentCardActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:enabled="true" android:name="com.google.android.apps.wallet.purchaserecord.PurchaseRecordListActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/transactions" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:path="/fundstransfer/p2p/request/outgoing/list" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/transactions" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:enabled="true" android:name="com.google.android.apps.wallet.purchaserecord.PurchaseRecordDetailActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/transaction/.*/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/m/cgw/transaction/.*/view" android:scheme="https">
+				</data>
+				<data android:host="" android:pathPattern="/transaction/byId/.*/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/m/cgw/transaction/byId/.*/view" android:scheme="https">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/.*/decline" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/byId/.*/decline" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/.*/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/request/byId/.*/view" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/transaction/.*/return" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/fundstransfer/p2p/transaction/byId/.*/return" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.purchaserecord.StoredValueStatementsListActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/walletbalance/statements" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.settings.ui.SettingsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/settings" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:path="/m/cgw/settings" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.pin.PinSettingsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.settings.ui.NotificationSettingsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/settings/notifications" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.settings.ui.LowBalanceSettingsActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.BankAccountDetailsActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.ChallengeDepositActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.ChallengeDepositDeclinedActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.init.ui.InitializerActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.paymentcard.ui.PaymentCardDetailsActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.restrictioncheck.WalletRestrictionCheckFailActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.rpcrejection.RpcRejectionActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.AddBankAccountActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.VerifyBankAccountActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.VerifyWithDepositActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.bankaccount.VerifyWithIavActivity" android:screenOrientation="1" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.orders.OrdersSetupActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/orderssetup" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:exported="false" android:name="com.google.android.apps.wallet.loyalty.LoyaltyProgramSearchActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.FeaturedProgramDetailsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:pathPattern="/loyalty/discoverable/.*/view/detail" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="" android:pathPattern="/loyalty/discoverable/.*/link" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/m/cgw/loyalty/discoverable/.*/view/detail" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/manage/cgw/loyalty/discoverable/.*/view/detail" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.NewLoyaltyCardActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.EditLoyaltyCardActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/loyalty/instance/.*/fullEdit" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.giftcard.EditGiftCardActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/giftcards/instance/.*/fullEdit" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.giftcard.NewGiftCardActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.add.CaptureImagesActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.loyalty.ScanBarcodeActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.add.CustomizeProgramCardActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.ViewWoblActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:pathPattern="/objects/instance/.*/view/entry/.*" android:scheme="comgooglewallet">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/m/cgw/objects/instance/.*/view/entry/.*" android:scheme="https">
+				</data>
+				<data android:host="wallet.google.com" android:pathPattern="/manage/cgw/objects/instance/.*/view/entry/.*" android:scheme="https">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.WoblPhotoViewActivity" android:theme="@7F0A018E">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/objects/instance/.*/fullscreen/image.*" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.PerWobNotificationSettingsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.PlasticCardTutorialActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/card/tutorial" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.OrderPlasticCardActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/card/request" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.OrderPlasticCardCongratulationsActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.PlasticCardDetailsActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/card/details" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.ActivatePlasticCardActivity" android:theme="@7F0A018C" android:windowSoftInputMode="0x00000002">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:path="/card/activate" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.plastic.CancelPlasticCardActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.WobWebViewActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/objects/instance/.*/view/web" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.FeedbackPreviewActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.offers.HowOffersWorkActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.giftcard.SimplifiedEditGiftCardActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:host="" android:pathPattern="/giftcards/instance/.*/edit" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.upload.SendFeedbackActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.wobs.SendWobNotificationFeedbackActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.oneview.OneViewListActivity" android:theme="@7F0A018C">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="" android:path="/oneview" android:scheme="comgooglewallet">
+				</data>
+			</intent-filter>
+		</activity>
+		<receiver android:name="com.google.android.apps.wallet.nfc.NfcAdapterStateReceiver">
+			<intent-filter>
+				<action android:name="android.nfc.action.ADAPTER_STATE_CHANGED">
+				</action>
+				<action android:name="android.nfc.action.ADAPTER_STATE_CHANGE">
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.google.android.apps.wallet.notifications.C2dmRegistrationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE">
+				</action>
+				<category android:name="com.google.android.apps.walletnfcrel">
+				</category>
+			</intent-filter>
+		</receiver>
+		<receiver android:exported="false" android:name="com.google.android.apps.wallet.geofencing.service.GeofencingReceiver">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.LOCATION_READY_BROADCAST">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.CROSS_BOUNDARY_BROADCAST">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.LEAVE_EXIT_ZONE_BROADCAST">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.REQUEST_LOCATION_BROADCAST">
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.google.android.apps.wallet.account.LoginAccountsChangedReceiver">
+			<intent-filter>
+				<action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED">
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.google.android.apps.wallet.init.OnBootOrUpgradeReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED">
+				</action>
+				<action android:name="android.intent.action.QUICKBOOT_POWERON">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_REPLACED">
+				</action>
+				<data android:path="com.google.android.apps.walletnfcrel" android:scheme="package">
+				</data>
+			</intent-filter>
+		</receiver>
+		<receiver android:exported="false" android:name="com.google.android.apps.wallet.logging.LoggingPriorityChangeReceiver">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.logging.CHANGE_LOG_PRIORITY_LEVEL">
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.hce.HceTapProcessorService">
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.hce.setup.NfcPaymentSetupService">
+		</service>
+		<service android:enabled="false" android:exported="true" android:name="com.google.android.apps.wallet.hce.WalletHceService" android:permission="android.permission.BIND_NFC_SERVICE">
+			<intent-filter>
+				<action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+			</intent-filter>
+			<meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@7F060000">
+			</meta-data>
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.notifications.C2dmDispatchService">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.services.c2dm.C2DM_RECEIVE">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.geofencing.service.GeofencingService">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.START_GEOFENCING_NOTIFICATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.STOP_GEOFENCING_NOTIFICATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.REQUEST_LOCATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.ON_LOCATION_READY">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.ON_CROSS_BOUNDARY">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.ON_LEAVE_EXIT_ZONE">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.ON_NOTIFICATION_SETTINGS_CHANGED">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.geofencing.ON_ZONE_DATA_CHANGED">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.geofencing.service.GeofencingNotificationService">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.geofencing.notification.SHOW_NEXT">
+				</action>
+				<action android:name="com.google.android.apps.wallet.geofencing.notification.SHOW_PREVIOUS">
+				</action>
+				<action android:name="com.google.android.apps.wallet.geofencing.notification.SHOW_FIRST">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:name="com.google.android.apps.wallet.account.LoginAccountsChangedService">
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.init.OnBootOrUpgradeService">
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.sound.SoundService">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.services.misc.SoundService.PLAY">
+				</action>
+			</intent-filter>
+		</service>
+		<service android:exported="false" android:name="com.google.android.apps.wallet.notifications.NotificationService">
+			<intent-filter>
+				<action android:name="com.google.android.apps.wallet.services.notification.OPEN_PUSH_NOTIFICATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.notification.DISMISS_PUSH_NOTIFICATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.notification.OPEN_GEOFENCING_NOTIFICATION">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.notification.OPEN_GEOFENCING_NOTIFICATION_WOB_DETAIL">
+				</action>
+				<action android:name="com.google.android.apps.wallet.services.notification.DISMISS_GEOFENCING_NOTIFICATION">
+				</action>
+				<data android:host="notificationservice" android:pathPattern=".*" android:scheme="walletnotification">
+				</data>
+			</intent-filter>
+		</service>
+		<service android:name="com.google.android.gms.analytics.CampaignTrackingService">
+		</service>
+		<activity android:launchMode="1" android:name="com.google.android.apps.wallet.usersetup.SimplifiedSetupProfileActivity" android:screenOrientation="1" android:theme="@7F0A018C">
+		</activity>
+		<activity android:launchMode="1" android:name="com.google.android.apps.wallet.usersetup.SetupProfileActivity" android:theme="@7F0A018C">
+		</activity>
+		<activity android:name="com.google.android.apps.wallet.usersetup.WarmWelcomeActivity" android:screenOrientation="1" android:theme="@7F0A018F">
+		</activity>
+		<service android:exported="false" android:name="com.google.android.libraries.uploader.service.lib.service.UploadService">
+			<intent-filter>
+				<action android:name="scotty.intent.action.UPLOAD">
+				</action>
+			</intent-filter>
+		</service>
+		<meta-data android:name="com.google.android.gms.version" android:value="@7F0E0004">
+		</meta-data>
+		<activity-alias android:exported="true" android:name="com.google.android.apps.wallet.WalletRootActivity" android:targetActivity="com.google.android.apps.wallet.entrypoint.WalletRootActivity">
+		</activity-alias>
+		<activity-alias android:exported="true" android:name="com.android.internal.app.ResolverActivity" android:targetActivity="com.google.android.apps.wallet.entrypoint.WalletRootActivity">
+		</activity-alias>
+	</application>
+	<permission android:name="com.google.android.apps.walletnfcrel.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+	</permission>
+	<permission android:description="@7F08046F" android:label="@7F08046E" android:name="com.google.android.apps.wallet.permission.WALLET_INTERNAL" android:protectionLevel="0x00000002">
+	</permission>
+	<uses-feature android:name="android.hardware.camera" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.camera.flash" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.nfc" android:required="false">
+	</uses-feature>
+</manifest>

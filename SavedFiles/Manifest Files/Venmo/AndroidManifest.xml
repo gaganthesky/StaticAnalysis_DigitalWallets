@@ -1,0 +1,244 @@
+<?xml version="1.0" ?><manifest android:installLocation="0" android:versionCode="174" android:versionName="6.7.2" package="com.venmo" platformBuildVersionCode="22" platformBuildVersionName="5.1-1756733" xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22">
+	</uses-sdk>
+	<uses-feature android:name="android.permission.SEND_SMS" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.telephony" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.location" android:required="false">
+	</uses-feature>
+	<uses-feature android:name="android.hardware.location.gps" android:required="false">
+	</uses-feature>
+	<permission android:name="com.venmo.permission.C2D_MESSAGE" android:protectionLevel="0x00000002">
+	</permission>
+	<uses-permission android:name="com.venmo.permission.C2D_MESSAGE">
+	</uses-permission>
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_CONTACTS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK">
+	</uses-permission>
+	<uses-permission android:name="android.permission.SEND_SMS">
+	</uses-permission>
+	<application android:icon="@7F020038" android:label="@7F07001F" android:name="com.venmo.ApplicationState" android:supportsRtl="true" android:theme="@7F0F00D6">
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@7F0700C1">
+		</meta-data>
+		<activity android:alwaysRetainTaskState="true" android:configChanges="0x00000480" android:launchMode="1" android:name="com.venmo.TabCentralActivity" android:theme="@7F0F00D7">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="0x00000480" android:name="com.venmo.WebViewActivity">
+		</activity>
+		<activity android:name="com.venmo.controller.InviteActivity">
+		</activity>
+		<activity android:name="com.venmo.SearchFriendsActivity">
+		</activity>
+		<activity android:name="com.venmo.LinkedAccountsActivity">
+		</activity>
+		<activity android:name="com.venmo.ProfileActivity" android:screenOrientation="1">
+		</activity>
+		<activity android:name="com.venmo.VenmoURLActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="venmo.com" android:pathPrefix="/" android:scheme="venmo">
+				</data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:scheme="venmo">
+				</data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:host="venmo.cc" android:scheme="http">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:alwaysRetainTaskState="true" android:label="@7F07015D" android:name="com.venmo.firstrun.WelcomeActivity" android:screenOrientation="1" android:theme="@7F0F00D8">
+		</activity>
+		<activity android:name="com.venmo.firstrun.FBCompleteSignupActivity">
+		</activity>
+		<activity android:name="com.venmo.firstrun.LoginActivity">
+		</activity>
+		<activity android:name="com.venmo.firstrun.VerifyActivity">
+		</activity>
+		<activity android:name="com.venmo.firstrun.PinActivity">
+		</activity>
+		<activity android:name="com.venmo.auth.TwoFactorActivity" android:windowSoftInputMode="0x00000020">
+		</activity>
+		<activity android:name="com.venmo.controller.TrustedDevicesActivity" android:theme="@7F0F0081">
+		</activity>
+		<activity android:label="@7F07001F" android:name="com.facebook.LoginActivity" android:theme="@android:01030010">
+		</activity>
+		<activity android:configChanges="0x00000480" android:name="com.venmo.firstrun.SignupActivity">
+		</activity>
+		<activity android:name="com.venmo.controller.ConnectFacebookActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsAudienceActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsSharingOtherNetworksActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsTransactionsInvolvingMeActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsShareLikesToFacebookActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsAutofriendActivity">
+		</activity>
+		<activity android:name="com.venmo.SignupProfileActivity" android:windowSoftInputMode="0x00000024">
+		</activity>
+		<activity android:excludeFromRecents="true" android:launchMode="1" android:name="com.venmo.ShortcutActivity" android:taskAffinity="android.task.venmoshortcut">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:mimeType="vnd.android.cursor.item/vnd.venmo.profile">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.venmo.FriendsFriendsActivity">
+		</activity>
+		<activity android:name="com.venmo.PinSettingsActivity">
+		</activity>
+		<activity android:name="com.venmo.ComposeActivity" android:screenOrientation="1" android:theme="@7F0F006D" android:windowSoftInputMode="0x00000014">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="android.intent.category.BROWSABLE">
+				</category>
+				<data android:scheme="venmosdk">
+				</data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.venmo.ServerPreferenceActivity">
+		</activity>
+		<activity android:name="com.venmo.controller.FriendsListActivity">
+		</activity>
+		<activity android:name="com.venmo.StoryActivity" android:windowSoftInputMode="0x00000012">
+		</activity>
+		<activity android:name="com.venmo.TransferStoryActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsNotificationsActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsPushNotificationsActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsEmailNotificationsActivity">
+		</activity>
+		<activity android:name="com.venmo.SettingsSMSNotificationsActivity">
+		</activity>
+		<activity android:name="com.venmo.LikesListActivity">
+		</activity>
+		<activity android:launchMode="1" android:name="com.venmo.LoggingOutActivity" android:noHistory="true">
+		</activity>
+		<activity android:name="com.venmo.tests.ActivityInTestPackageActivity">
+		</activity>
+		<service android:name="com.venmo.InviteIntentService">
+		</service>
+		<service android:name="com.venmo.service.ReadAddressBookService">
+		</service>
+		<receiver android:exported="true" android:name="com.venmo.ReferralReceiver">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER">
+				</action>
+			</intent-filter>
+		</receiver>
+		<meta-data android:name="com.crashlytics.ApiKey" android:value="307360ff4c5f70a6830de66b51033c02902eada6">
+		</meta-data>
+		<activity android:exported="true" android:name="com.venmo.CardChooserActivity">
+		</activity>
+		<service android:exported="false" android:name="com.venmo.notifications.NotificationService">
+		</service>
+		<receiver android:exported="true" android:name="com.venmo.notifications.NotificationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE">
+				</action>
+				<category android:name="com.venmo">
+				</category>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.venmo.notifications.PackageReplacedReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED">
+				</action>
+			</intent-filter>
+		</receiver>
+		<meta-data android:name="com.google.android.gms.version" android:value="@7F0D0006">
+		</meta-data>
+		<activity android:name="com.braintreepayments.api.dropin.BraintreePaymentActivity">
+		</activity>
+		<activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity">
+		</activity>
+		<activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity">
+		</activity>
+		<activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity">
+		</activity>
+		<activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity">
+		</activity>
+		<activity android:name="com.paypal.android.sdk.payments.LoginActivity">
+		</activity>
+		<activity android:name="com.paypal.android.sdk.payments.PayPalTouchActivity" android:theme="@android:01030010">
+		</activity>
+		<service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService">
+		</service>
+		<activity android:name="com.venmo.android.pin.TestActivity">
+		</activity>
+		<activity android:name="com.mixpanel.android.surveys.SurveyActivity">
+		</activity>
+		<receiver android:exported="true" android:name="com.mixpanel.android.mpmetrics.InstallReferrerReceiver">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER">
+				</action>
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

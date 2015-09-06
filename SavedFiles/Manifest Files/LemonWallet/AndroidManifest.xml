@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><manifest android:versionCode="28" android:versionName="2.1.91" package="com.removed" xmlns:android="http://schemas.android.com/apk/res/android">
+	<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true">
+	</supports-screens>
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19">
+	</uses-sdk>
+	<permission android:description="@7F080014" android:label="@7F080013" android:name="com.removed.permission.ACCESS_DOWNLOAD_MANAGER" android:protectionLevel="0x00000000">
+	</permission>
+	<permission android:description="@7F080016" android:label="@7F080015" android:name="com.removed.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" android:protectionLevel="0x00000000">
+	</permission>
+	<permission android:description="@7F080018" android:label="@7F080017" android:name="com.removed.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" android:protectionLevel="0x00000000">
+	</permission>
+	<uses-permission android:name="com.removed.permission.ACCESS_DOWNLOAD_MANAGER">
+	</uses-permission>
+	<uses-permission android:name="com.removed.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED">
+	</uses-permission>
+	<uses-permission android:name="com.removed.permission.SEND_DOWNLOAD_COMPLETED_INTENTS">
+	</uses-permission>
+	<permission android:name="com.removed.permission.JPUSH_MESSAGE" android:protectionLevel="0x00000002">
+	</permission>
+	<uses-permission android:name="com.removed.permission.JPUSH_MESSAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT">
+	</uses-permission>
+	<uses-permission android:name="android.permission.INTERNET">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+	</uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+	</uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+	</uses-permission>
+	<application android:allowBackup="true" android:debuggable="true" android:hardwareAccelerated="false" android:icon="@7F020129" android:label="@7F080049" android:name="com.removed.imgs.ImageLoaderApp" android:theme="@7F0C005A">
+		<activity android:label="@7F080049" android:name="com.removed.activity.HomeActivity" android:screenOrientation="1" android:theme="@android:01030006">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN">
+				</action>
+				<category android:name="android.intent.category.LAUNCHER">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.EggsDetail" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.Search_Double_Activity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.Gag_Activity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.Gag_detail_Webview" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.SexyToolsActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.SexyGamesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.Detail_Search_webview_Activity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.SettingActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.CasualGamesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.TopImage" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.SearchActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.CategoriesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.BestChoiceActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.ImagersSecetor" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name=".activity.DisplayActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.fragment.app_SelectFragment" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.fragment.Must_have_apps_Fragment" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.downloadsui.DownloadList" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.ShowActivity">
+		</activity>
+		<activity android:name="com.removed.activity.LiveWallPaperActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.LiveWallPaperCategoriesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.WallPaperCategoriesActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.WallPaperActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.AdultActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.TopImageResultActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.Must_Have_apps_Result" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.BestPicksActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:name="com.removed.activity.WebViewActivity" android:screenOrientation="1" android:theme="@android:01030006">
+		</activity>
+		<activity android:configChanges="0x00000FB0" android:name="com.google.ads.AdActivity">
+		</activity>
+		<provider android:authorities="com.removed.downloads" android:name="com.removed.downloads.DownloadProvider">
+		</provider>
+		<service android:name="com.removed.downloads.DownloadService">
+		</service>
+		<receiver android:exported="false" android:name="com.removed.downloads.DownloadReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED">
+				</action>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+				</action>
+			</intent-filter>
+		</receiver>
+		<meta-data android:name="UMENG_APPKEY" android:value="53cf074656240bd09a04c7b3">
+		</meta-data>
+		<meta-data android:name="UMENG_CHANNEL" android:value="AppEggsMarket 20140520">
+		</meta-data>
+		<activity android:name="com.removed.activity.TestActivity">
+			<intent-filter>
+				<action android:name="jpush.testAction">
+				</action>
+				<category android:name="jpush.testCategory">
+				</category>
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="0x000000A0" android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:01030010">
+			<intent-filter>
+				<action android:name="cn.jpush.android.ui.PushActivity">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<category android:name="com.removed">
+				</category>
+			</intent-filter>
+		</activity>
+		<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.DownloadService">
+		</service>
+		<service android:enabled="true" android:exported="false" android:name="cn.jpush.android.service.PushService">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTER">
+				</action>
+				<action android:name="cn.jpush.android.intent.REPORT">
+				</action>
+				<action android:name="cn.jpush.android.intent.PushService">
+				</action>
+				<action android:name="cn.jpush.android.intent.PUSH_TIME">
+				</action>
+			</intent-filter>
+		</service>
+		<receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver">
+			<intent-filter android:priority="1000">
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+				</action>
+				<category android:name="com.removed">
+				</category>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT">
+				</action>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED">
+				</action>
+				<action android:name="android.intent.action.PACKAGE_REMOVED">
+				</action>
+				<data android:scheme="package">
+				</data>
+			</intent-filter>
+		</receiver>
+		<receiver android:name="cn.jpush.android.service.AlarmReceiver">
+		</receiver>
+		<receiver android:enabled="true" android:name="com.removed.activity.MyReceiver">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTRATION">
+				</action>
+				<action android:name="cn.jpush.android.intent.UNREGISTRATION">
+				</action>
+				<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+				</action>
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+				</action>
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+				</action>
+				<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK">
+				</action>
+				<category android:name="com.removed">
+				</category>
+			</intent-filter>
+		</receiver>
+		<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default">
+		</meta-data>
+		<meta-data android:name="JPUSH_APPKEY" android:value="a1f881c2ff3074aba6ae6268">
+		</meta-data>
+	</application>
+</manifest>

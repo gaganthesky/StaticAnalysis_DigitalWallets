@@ -1,0 +1,6 @@
+The enclosed Directory named StaticAnalysisDigitalWallet contains files as follows:
+1)	Project Manual
+2)	APK Files used in the Analysis
+3)	Tools Used: DARE as DALVIK Compiler and JAD as Java De-compiler
+4)	Directory Saved Files: It contains the particular files from all JAVA files of each application. They have relevant JAVA code and structure that supports the Finding of the Analysis.
+5)	
